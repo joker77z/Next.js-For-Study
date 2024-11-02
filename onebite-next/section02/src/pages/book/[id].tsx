@@ -1,3 +1,5 @@
+import style from "./[id].module.css";
+
 const mockData = {
   id: 1,
   title: "한 입 크기로 잘라 먹는 리액트",
@@ -13,11 +15,17 @@ export default function BookDetailPage() {
   const { id, title, subTitle, description, author, publisher, coverImgUrl } = mockData;
 
   return (
-    <div>
-      <div style={{ backgroundImage: `url('${coverImgUrl}')` }}>
+    <div className={style["top-container"]}>
+      <div style={{ backgroundImage: `url('${coverImgUrl}')` }} className={style.container}>
         <img src={coverImgUrl} />
-        <div></div>
       </div>
+      <div className={style.title}>{title}</div>
+      <div className={style.subTitle}>{subTitle}</div>
+      <div className={style.author}>
+        {author} | {publisher}
+      </div>
+
+      <div className={style.description}>{description}</div>
     </div>
   );
 }
