@@ -1,5 +1,6 @@
-import "./globals.css";
+import Footer from "@/components/footer/footer";
 import Link from "next/link";
+import "./globals.css";
 import style from "./layout.module.css";
 
 export default function RootLayout({
@@ -16,6 +17,7 @@ export default function RootLayout({
           </header>
           <main>{children}</main>
           <footer>제작 @winterlood</footer>
+          <Footer />
         </div>
       </body>
     </html>
