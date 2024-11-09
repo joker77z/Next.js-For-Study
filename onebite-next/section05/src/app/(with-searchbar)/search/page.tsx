@@ -1,6 +1,8 @@
 import BookItem from "@/components/book-item";
 import { BookData } from "@/types";
 
+export const dynamic = "force-static";
+
 interface SearchParams {
   q?: string | number | boolean;
 }
